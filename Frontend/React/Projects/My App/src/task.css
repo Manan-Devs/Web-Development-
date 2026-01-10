@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+body {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:20%;
+    height:10vh;
+}
+
+.addTask {
+     display:flex;
+     flex-direction:column;
+     gap:30px;
+     justify-content: center;
+     align-items: center;
+     background-color:lightgray;
+     border-radius:10px;
+     font-family:"Ubuntu",sans-serif;
+}
+
+.app {
+     display:grid;
+     grid-template-columns:1fr 2fr;
+     border-radius:10px;
+     border:5px solid black;
+     height:300px;
+     padding:30px;
+     font-family:"Ubuntu",sans-serif;
+}
+
+.addTaskContainer {
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+}
+
+.titleCont {
+     display:flex;
+     gap:20px;
+}
+
+.titleCont textarea {
+      height:60px;
+      width:100%;
+}
