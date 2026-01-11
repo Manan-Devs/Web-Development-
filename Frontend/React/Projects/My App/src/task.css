@@ -1,47 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
+/* =====================
+   PAGE BACKGROUND
+===================== */
 body {
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    margin-top:20%;
-    height:10vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
 }
 
-.addTask {
-     display:flex;
-     flex-direction:column;
-     gap:30px;
-     justify-content: center;
-     align-items: center;
-     background-color:lightgray;
-     border-radius:10px;
-     font-family:"Ubuntu",sans-serif;
+/* =====================
+   MAIN APP CONTAINER
+===================== */
+.App {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1100px;      /* FULL SIZE ON LAPTOP */
+  min-height: 85vh;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease;
 }
 
-.app {
-     display:grid;
-     grid-template-columns:1fr 2fr;
-     border-radius:10px;
-     border:5px solid black;
-     height:300px;
-     padding:30px;
-     font-family:"Ubuntu",sans-serif;
+/* =====================
+   TITLE
+===================== */
+.App h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
 }
 
-.addTaskContainer {
-      display:flex;
-      align-items:center;
-      flex-direction:column;
+/* =====================
+   LAYOUT (DESKTOP)
+===================== */
+.todo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-.titleCont {
-     display:flex;
-     gap:20px;
+/* =====================
+   FORM STYLING
+===================== */
+form div {
+  margin-bottom: 18px;
 }
 
-.titleCont textarea {
-      height:60px;
-      width:100%;
+label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.18);
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* =====================
+   PRIMARY BUTTON
+===================== */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(102, 126, 234, 0.45);
+}
+
+/* Active */
+button:active {
+  transform: translateY(0);
+}
+
+/* Shine Effect */
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+button:hover::after {
+  left: 100%;
+}
+
+/* Disabled */
+button:disabled {
+  background: #d1d1d1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* =====================
+   TODO LIST
+===================== */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f8f9ff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+li h4 {
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+li p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* =====================
+   DELETE BUTTON
+===================== */
+li button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: auto;
+  padding: 7px 14px;
+  font-size: 12px;
+  background: linear-gradient(135deg, #ff4d4f, #ff7a7a);
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+li button:hover {
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 8px 18px rgba(255, 77, 79, 0.45);
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   TABLET & MOBILE
+===================== */
+@media (max-width: 768px) {
+  .todo-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .App {
+    padding: 22px;
+  }
+
+  .App h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .App {
+    padding: 18px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
 }
