@@ -3,7 +3,7 @@ import "./task.css";
 function App() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [todos, setTodos] = 
+  const [todos, setTodos] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
