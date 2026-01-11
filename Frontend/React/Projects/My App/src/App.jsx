@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !body) return;
+    if (!title || !body) 
 
     const newTodo = {
       id: Date.now(),
