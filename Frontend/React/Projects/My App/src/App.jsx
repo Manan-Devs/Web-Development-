@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !body) 
+    if (!title || !body) return;
 
     const newTodo = {
       id: Date.now(),
@@ -59,7 +59,7 @@ function App() {
           <li key={todo.id}>
             <h4>{todo.title}</h4>
             <p>{todo.body}</p>
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button  onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
