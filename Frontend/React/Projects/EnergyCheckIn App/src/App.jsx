@@ -1,17 +1,16 @@
 // import { useState } from 'react';
 import './App.css';
 import Header from './header.jsx';
-
-// import './main.jsx'
-// import './noteInput.jsx'
-// import './todayStatus.jsx';
+import EnergySelector from './energySelector.jsx';
+import NoteInput from './noteInput.jsx'
+import TodayStatus from  './todayStatus.jsx';
 function App () {
   return (
     <div className='app'>
-      <Header/>
-     {/* <energySelector/>
+     <Header/>
+     <EnergySelector/>
      <NoteInput/>
-     <TodayStatus/> */}
+     <TodayStatus/>
    </div>
   )
    
