@@ -1,16 +1,11 @@
 
 
+
+
 function Header() {
-   return (
-      <div>
-   <h1> 🌱 Daily Energy Check In </h1>
-     <hr/>
-    </div>
-   )
-   
-
+  return (
+    <h1 className="header">🌱 Daily Energy Check-In</h1>
+  );
 }
-
-
 
 export default Header;

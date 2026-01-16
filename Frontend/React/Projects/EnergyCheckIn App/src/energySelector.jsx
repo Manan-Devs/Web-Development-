@@ -1,18 +1,36 @@
 
 
-function energySelector() {
-    return (
-         <div className="energySelector">
-              <h2>How is you energy today ? </h2>
-             <div className="btn-container">
-                 <button className="btn">Low</button>
-                 <button className="btn">Medium</button>
-                 <button className="btn">High</button>
-             </div>
-         </div>
-    ) 
+
+
+function EnergySelector({ energy, setEnergy }) {
+  return (
+    <div className="energy-box">
+      <p>How is your energy today?</p>
+
+      <div className="buttons">
+        <button
+          className={energy === "Low" ? "active" : ""}
+          onClick={() => setEnergy("Low")}
+        >
+          😴 Low
+        </button>
+
+        <button
+          className={energy === "Medium" ? "active" : ""}
+          onClick={() => setEnergy("Medium")}
+        >
+          🙂 Medium
+        </button>
+
+        <button
+          className={energy === "High" ? "active" : ""}
+          onClick={() => setEnergy("High")}
+        >
+          ⚡ High
+        </button>
+      </div>
+    </div>
+  );
 }
 
-
-export default energySelector;
-
+export default EnergySelector;
