@@ -39,7 +39,7 @@ import "./Form.css";
            </div> 
 
            <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">PhoneNumber: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
@@ -47,7 +47,7 @@ import "./Form.css";
            </div> 
 
            <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">Password: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
@@ -55,35 +55,35 @@ import "./Form.css";
            </div> 
 
            <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">Age: </label>
+              <input id="first" {...register ('age', 
+                 {required:"Name can't be empty"}
+              )} />
+                {errors.name && <span>{errors.name.message}</span>}
+           </div> 
+           <div className="item">
+              <label htmlFor="first">Country: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
                 {errors.name && <span>{errors.name.message}</span>}
            </div> 
            <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">State: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
                 {errors.name && <span>{errors.name.message}</span>}
            </div> 
            <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">City: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
                 {errors.name && <span>{errors.name.message}</span>}
            </div> 
            <div className="item">
-              <label htmlFor="first">Name: </label>
-              <input id="first" {...register ('name', 
-                 {required:"Name can't be empty"}
-              )} />
-                {errors.name && <span>{errors.name.message}</span>}
-           </div> 
-           <div className="item">
-              <label htmlFor="first">Name: </label>
+              <label htmlFor="first">: </label>
               <input id="first" {...register ('name', 
                  {required:"Name can't be empty"}
               )} />
@@ -111,7 +111,7 @@ import "./Form.css";
                 {errors.name && <span>{errors.name.message}</span>}
            </div> 
          </form>
-             <div className="submit">
+            <div className="submit">
              <button>Submit</button>
            </div>
          
