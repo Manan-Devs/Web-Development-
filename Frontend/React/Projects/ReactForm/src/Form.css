@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background-color:black;
+    overflow-x:hidden;
+}
+
+form {
+     height:100%;
+     width:100%;
+     display:grid;
+     grid-template-columns:1fr 1fr 1fr;
+     grid-template-rows:1fr,1fr ,1fr;
+     gap:10px;
+     padding:5rem 10rem 5rem 1rem;
+     background:#7b5c3869;
+     
+}
+
+form label {
+     color:white;
+     font-family:"Roboto",sans-serif;
+     font-size:xx-large;
+}
+
+form input {
+     height:1.5rem;
+     width:20rem;
+}
+
+.item {
+     display: flex;
+     flex-direction:column;
+     gap:10px;
+}
+
+
