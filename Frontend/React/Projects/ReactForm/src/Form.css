@@ -14,7 +14,7 @@ form {
      gap:30px;
      padding:5rem 10rem 5rem 1rem;
      background-color:black;
-     
+     color:white;
      
 }
 
@@ -37,8 +37,7 @@ form input {
 
 
 .submit {
-      text-align:center;
-      margin-top:10px;
+      align-content:center;
 }
 
 .submit button {
