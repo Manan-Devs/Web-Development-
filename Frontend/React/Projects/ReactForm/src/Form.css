@@ -11,7 +11,7 @@ form {
      display:grid;
      grid-template-columns:1fr 1fr 1fr;
      grid-template-rows:1fr,1fr ,1fr;
-     gap:30px;
+     gap:100px;
      padding:5rem 10rem 5rem 1rem;
      background-color:black;
      color:white;
@@ -25,19 +25,24 @@ form label {
 }
 
 form input {
-     height:1.5rem;
+     height:2rem;
      width:20rem;
+     border-radius:5px;
+     border:none;
 }
 
 .item {
      display: flex;
      flex-direction:column;
-     gap:10px;
+     gap:30px;
 }
 
 
 .submit {
-      align-content:center;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      margin-top:50px;
 }
 
 .submit button {
@@ -47,7 +52,7 @@ form input {
       width:200px;
       font-size:xx-large;
       cursor:pointer;
-      background-color:red;
+      background-color:lightskyblue;
       transition:0.5s ease-in-out;
 }
 
@@ -56,5 +61,9 @@ form input {
       border:10px thin;
       border-color:lightgreen;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.error {
+      color:red;
 }
 
