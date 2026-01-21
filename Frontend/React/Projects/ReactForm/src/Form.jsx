@@ -29,7 +29,7 @@ const formSchema = z.object({
 
   return(
         <>
-        <form action={"/submit-your-form-endpoint"}>
+        <form action={"/submit-your-form-endpoint"} method= "Post">
          <div className="item">
             <label htmlFor="first">Name: </label>
             <input id="first" {...register('name')} />
@@ -57,7 +57,7 @@ const formSchema = z.object({
          </div>
          </form>
          <div className="submit">
-             <button onClick={handleSubmit(submitForm)}>Submit</button>
+             <button type="submit" onClick={handleSubmit(submitForm)}>Submit</button>
           </div>
         </>
   )
