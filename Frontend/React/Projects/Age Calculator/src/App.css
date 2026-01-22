@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+    background-color:lightgray;
+}
+
+
+.ageCalculatorContainer {
+  height:500px;
+  width:600px;
+  background-color:lightblue;
+  border-bottom-right-radius:150px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom-left-radius:10px;
+  box-shadow:5px 20px 20px 5px outset;
+}
+
+.data {
+   display: flex;
+   flex-direction:column;
+   padding:50px;
+}
+
+.inputs {
+    display: flex;
+    justify-content:start;
+    gap:40px;
+}
+
+input {
+   height:40px;
+   width:100px;
+   border-style:none;
+   border-radius:5px;
+}
