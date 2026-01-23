@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -8,9 +10,9 @@ body {
 
 
 .ageCalculatorContainer {
-  height:500px;
+  height:570px;
   width:600px;
-  background-color:lightblue
+  background-color:white;
   border-bottom-right-radius:150px;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
@@ -22,6 +24,7 @@ body {
    display: flex;
    flex-direction:column;
    padding:50px;
+   margin-bottom:-70px;
 }
 
 .inputs {
@@ -33,6 +36,75 @@ body {
 input {
    height:40px;
    width:100px;
-   border-style:none;
+   border-style:double;
    border-radius:5px;
+   margin-bottom:30px;
+   font-family: "Poppins",sans-serif;
+   font-size:large;
+   font-weight:bold;
+   padding-left:10px;
 }
+
+input::placeholder {
+   color:grey;
+   font-size: 14px;
+   font-family: "Poppins", sans-serif;
+   opacity: 0.7;
+}
+
+
+.age {
+     padding-left:50px;
+}
+
+.age h1 {
+    font-size:50px;
+}
+
+.age h1 {
+     font-family:"Poppins",sans-serif;
+     font-style:italic;
+     font-weight:bold;
+}
+
+h3 {
+     font-family:"Poppins",sans-serif;
+     font-size:light;
+     color:grey;
+     font-style:regular;
+}
+
+
+h1 span {
+     color:purple;
+}
+
+
+
+@media screen and (max-width:700px) {
+       .ageCalculatorContainer {
+           width:90%;
+       }
+
+       .data {
+           padding:20px;
+           margin-bottom:-50px;
+       }
+
+        .inputs {
+             gap:20px;
+             flex-wrap:wrap;
+            justify-content: center;
+        }
+
+        input {
+             width:80%;
+             margin-bottom:20px;
+
+        }
+     
+}
+
+
+
+
