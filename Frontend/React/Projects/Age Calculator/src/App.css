@@ -17,6 +17,8 @@ body {
   border-top-right-radius:10px;
   border-bottom-left-radius:10px;
   box-shadow:5px 20px 20px 5px outset;
+  transition: height 0.3s ease;
+  overflow: hidden;
 }
 
 .data {
@@ -113,13 +115,14 @@ h1 span {
       }
        .ageCalculatorContainer {
            width:100%;
-           height:800px;
+           height:auto;
+           min-height:700px;
            border-bottom-right-radius:5px;
        }
 
        .data {
            padding:20px;
-           margin-bottom:-50px;
+           margin-bottom:-30px;
        }
 
         .inputs {
@@ -131,5 +134,14 @@ h1 span {
         input {
              width:80%;
              margin-bottom:20px;
+        }
+
+        .age {
+             padding-left:20px;
+             padding-right:20px;
+        }
+
+        .age h1 {
+             font-size:35px;
         }
 }
