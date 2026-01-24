@@ -8,11 +8,33 @@ function App() {
   const [ageYears, setAgeYears] = useState("--");
   const [ageMonths, setAgeMonths] = useState("--");
   const [ageDays, setAgeDays] = useState("--");
+  const [error, setError] = useState("");
 
   function ageCalculator() {
-    const today = new Date();
-    const birthDate = new Date(years, months - 1, days);
+    setError("");
     
+    if (!years || !months || !days) {
+      setError("Please fill in all fields");
+      return;
+    }
+
+    const day = parseInt(days);
+    const month = parseInt(months);
+    const year = parseInt(years);
+
+    if (day < 1 || day > 31 || month < 1 || month > 12) {
+      setError("Please enter valid day (1-31) and month (1-12)");
+      return;
+    }
+
+    const today = new Date();
+    const birthDate = new Date(year, month - 1, day);
+
+    if (birthDate > today) {
+      setError("Birth date cannot be in the future");
+      return;
+    }
+
     let calcYears = today.getFullYear() - birthDate.getFullYear();
     let calcMonths = today.getMonth() - birthDate.getMonth();
     let calcDays = today.getDate() - birthDate.getDate();
@@ -50,10 +72,13 @@ function App() {
             <input value={years} onChange={(e) => setYears(e.target.value)} placeholder="YYYY" type="number" />
           </div>
         </div>
+        {error && <p style={{ color: "red", fontSize: "14px", marginTop: "10px" }}>{error}</p>}
         <div className="space">
           <hr />
           <button onClick={ageCalculator}>
-            <img src="" alt="" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
         </div>
       </div>
