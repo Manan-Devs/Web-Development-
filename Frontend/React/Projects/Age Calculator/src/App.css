@@ -8,7 +8,6 @@ body {
     background-color:lightgray;
 }
 
-
 .ageCalculatorContainer {
   height:570px;
   width:600px;
@@ -52,6 +51,36 @@ input::placeholder {
    opacity: 0.7;
 }
 
+.space {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.space hr {
+   flex: 1;
+   border: none;
+   border-top: 2px solid purple;
+   height: 0;
+}
+
+.space button {
+   background-color: purple;
+   border: none;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.space button:hover {
+   background-color: #7a3fa3;
+}
 
 .age {
      padding-left:50px;
@@ -74,19 +103,16 @@ h3 {
      font-style:regular;
 }
 
-
 h1 span {
      color:purple;
 }
-
-
 
 @media screen and (max-width:700px) {
       body {
           height:100%;
       }
        .ageCalculatorContainer {
-           width:90%;
+           width:100%;
            height:800px;
            border-bottom-right-radius:5px;
        }
@@ -105,11 +131,5 @@ h1 span {
         input {
              width:80%;
              margin-bottom:20px;
-
         }
-     
 }
-
-
-
-

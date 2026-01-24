@@ -56,7 +56,7 @@ function App() {
   }
 
   return (
-    <div className="ageCalculatorContainer">
+    <div className="ageCalculatorContainer" style={{ height: error ? "620px" : "570px" }}>
       <div className="data">
         <div className="inputs">
           <div className="day">
@@ -72,7 +72,7 @@ function App() {
             <input value={years} onChange={(e) => setYears(e.target.value)} placeholder="YYYY" type="number" />
           </div>
         </div>
-        {error && <p style={{ color: "red", fontSize: "14px", marginTop: "10px" }}>{error}</p>}
+        {error &&  <p style={{ color: "red", fontSize: "14px", marginTop: "10px" }}>{error}</p> }
         <div className="space">
           <hr />
           <button onClick={ageCalculator}>
