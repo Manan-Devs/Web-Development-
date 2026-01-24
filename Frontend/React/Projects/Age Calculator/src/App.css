@@ -82,8 +82,13 @@ h1 span {
 
 
 @media screen and (max-width:700px) {
+      body {
+          height:100%;
+      }
        .ageCalculatorContainer {
            width:90%;
+           height:800px;
+           border-bottom-right-radius:5px;
        }
 
        .data {
