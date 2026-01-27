@@ -88,14 +88,6 @@
                   <img src="https://simpleicons.org/icons/react.svg" alt="React" />
                   <h3>React</h3>
                 </div>
-                <div className="item">
-                  <img src="https://simpleicons.org/icons/git.svg" alt="Git" />
-                  <h3>Git & Github</h3>
-                </div>
-                <div className="item">
-                  <img src="https://simpleicons.org/icons/typescript.svg" alt="Typescript" />
-                  <h3>Typescript</h3>
-                </div>
               </div>
             </div>
 
@@ -111,45 +103,73 @@
               </div>
             </div>
 
-            {/* Portfolio */}
-            <div id="portfolio" data-animate>
-              <h2 className="heading">Portfolio</h2>
-              <div className="line"></div>
-              <div className="project-container">
-                <div className="project">
-                  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGluZ3xlbnwwfHx8fDE2NTg0MjU5NjM&ixlib=rb-1.2.1&q=80&w=400" alt="E-commerce" />
-                  <div className="card">
-                    <h3>E-commerce Website</h3>
-                    <p>A fully responsive online store built with modern design principles.</p>
-                    <span>HTML</span><span>CSS</span>
-                  </div>
-                </div>
-                <div className="project">
-                  <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTY1ODQyNTk5OQ&ixlib=rb-1.2.1&q=80&w=400" alt="Business" />
-                  <div className="card">
-                    <h3>Business Landing Page</h3>
-                    <p>A sleek, single-page site for a corporate client to generate leads</p>
-                    <span>HTML</span><span>Flexbox</span>
-                  </div>
-                </div>
-                <div className="project">
-                  <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE4fHxwb3J0Zm9saW98ZW58MHx8fHwxNjU4NDI2MDUx&ixlib=rb-1.2.1&q=80&w=400" alt="Blog" />
-                  <div className="card">
-                    <h3>Personal Blog Theme</h3>
-                    <p>A clean, content-focused blog theme designed for readability</p>
-                    <span>HTML</span><span>CSS</span>
-                  </div>
-                </div>
-                <div className="project">
-                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGRhc2hib2FyZHxlbnwwfHx8fDE2NTg0MjYwMjM&ixlib=rb-1.2.1&q=80&w=400" alt="Dashboard" />
-                  <div className="card">
-                    <h3>Analytics Dashboard UI</h3>
-                    <p>A data visualization dashboard UI created with CSS Grid</p>
-                    <span>CSS</span><span>UI UX</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+           {/* Portfolio */}
+     <div id="portfolio" data-animate>
+  <h2 className="heading">Portfolio</h2>
+  <div className="line"></div>
+  <div className="project-container">
+    <div className="project">
+      <img src="./src/assets/Library.jpg" alt="E-commerce" />
+      <div className="card">
+        <h3>E-commerce Website</h3>
+        <p>A fully responsive online E-commerce store built with modern design principles.</p>
+        <div className="project-links">
+          <a href="https://github.com/Manan-Devs/Web-Development-/tree/main/Frontend/Projects/Project%202" target="_blank" rel="noopener noreferrer">
+            <span>🔗 GitHub</span>
+          </a>
+          <a href="https://phenomenal-lollipop-b58023.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <span>🚀 Live</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="project">
+      <img src="./src/assets/Todo.jpg" alt="Todo-App" />
+      <div className="card">
+        <h3>Todo App</h3>
+        <p>Built a clean, responsive Todo App 📝 Simple UI, solid logic, real productivity vibes learning React by shipping, not just watching 🚀</p>
+        <div className="project-links">
+          <a href="https://github.com/Manan-Devs/Web-Development-/tree/main/Frontend/React/Projects/My%20App" target="_blank" rel="noopener noreferrer">
+            <span>🔗 GitHub</span>
+          </a>
+          <a href="https://enchanting-cannoli-291c50.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <span>🚀 Live</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="project">
+      <img src="./src/assets/EnergyCheckIn.jpg" alt="Blog" />
+      <div className="card">
+        <h3>Energychecker</h3>
+        <p>Built EnergyChecker a simple app to track daily energy levels and learn real-world React patterns while building 🚀</p>
+        <div className="project-links">
+          <a href="https://github.com/Manan-Devs/Web-Development-/tree/main/Frontend/React/Projects/EnergyCheckIn%20App" target="_blank" rel="noopener noreferrer">
+            <span>🔗 GitHub</span>
+          </a>
+          <a href="https://coruscating-pastelito-1dbb28.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <span>🚀 Live</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="project">
+      <img src="./src/assets/AgeCalculation.jpg" alt="Dashboard" />
+      <div className="card">
+        <h3>Age Calculator</h3>
+        <p>Built an Age Calculator 🧮 a clean, responsive app that calculates age accurately and sharpened my logic-building skills in React 🚀</p>
+        <div className="project-links">
+          <a href="https://github.com/Manan-Devs/Web-Development-/tree/main/Frontend/React/Projects/Age%20Calculator" target="_blank" rel="noopener noreferrer">
+            <span>🔗 GitHub</span>
+          </a>
+          <a href="https://dynamic-froyo-eea4cd.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <span>🚀 Live</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </>
