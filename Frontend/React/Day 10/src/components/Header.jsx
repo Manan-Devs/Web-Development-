@@ -1,4 +1,4 @@
-import Display from "./Display";
+import Counter from "./Counter";
 
 
 

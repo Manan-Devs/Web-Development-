@@ -5,11 +5,11 @@ import Counter from "./Counter";
 
 
 
-function Body() {
+function Body({count,setCount}) {
     return (
      <>
          <h1>I am the Blinkit Body</h1>
-         <Counter/>
+         <Counter count={count} setCount={setCount}/>
 
    </>
     )

@@ -1,10 +1,12 @@
-import {useState} from "react";
 
+import {useContext,useState} from "react";
+import {CounterContext} from "../App";
 
 
 function Counter() {
-      const [count,setCount] = useState(0);
-
+      
+    const {count,setCount} = useContext(CounterContext);
+   
 
       return (
          <> 
