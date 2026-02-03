@@ -1,16 +1,13 @@
 
-import {useContext} from "react";
-import {ProductContext} from "../App";
+import { useContext } from "react"
+import { ProductContext } from "../App";
 
-function Cart() {
+function Cart(){
     
-    const {cartItem} = useContext(ProductContext); 
-     return (
-        <h1>Total Item: {cartItem}</h1>
-
-     )
-
+    const {cartItem} = useContext(ProductContext);
+    return(
+        <h1>Total Item in Cart: {cartItem}</h1>
+    )
 }
-
 
 export default Cart;

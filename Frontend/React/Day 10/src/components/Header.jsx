@@ -9,7 +9,7 @@ function Header() {
     return (
      <>
        <h1>I am Blinkit</h1>
-       {/* <Display/> */}
+       <Cart/>
      </>
     )
 }
