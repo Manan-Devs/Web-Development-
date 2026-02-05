@@ -1,0 +1,74 @@
+
+body {
+  margin:0;
+  padding:0;
+  background-color:black;
+}
+
+
+nav {
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   background-color:rgb(33, 33, 37);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+
+.navbar-left h1{
+    color:white;
+    font-size:xx-large;
+    font-family:"Arial",sans-serif;
+}
+
+
+.navbar-right {
+    display: flex;
+    align-items:center;
+    gap:60px;
+}
+
+
+.LogIn {
+    padding:10px 25px;
+    cursor:pointer;
+    background-color:rgb(9, 69, 222);
+    border:none;
+    border-radius:5px;
+    font-size:xx-large;
+    color:white;
+}
+
+.LogOut {
+    padding:10px 25px;
+    cursor:pointer;
+    background-color:rgb(245, 71, 58);
+    border:none;
+    border-radius:5px;
+    font-size:xx-large;
+    color:white;
+}
+ 
+h2 {
+   font-size:x-large;
+   font-family:"Arial",sans-serif;
+   color:white;
+}
+
+
+
+
+@media (max-width:600px) {
+    .navbar-left h1 {
+       font-size:large;
+    }
+
+    .LogIn, .LogOut {
+         font-size:large;
+         
+    }
+}
