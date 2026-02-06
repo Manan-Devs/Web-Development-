@@ -1,29 +1,31 @@
-// import {useState} from "react";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
+function Navbar() {
+  const { user, setUser } = useContext(UserContext);
 
-function Navbar () {
+  const login = () => {
+    setUser({ name: "Aman" });
+  };
 
-    // const [user,setUser] = useStatae(null);
-    return (
-       
-     <>    
-      <nav>
-        <div className="navbar-left">
-              <h1>React Context Playground</h1>
-        </div>
-         <div className="navbar-right">
-              <h2>Hello , Guest!</h2>
-              <button className="LogIn">Login</button>
-              <button className="LogOut">Logout</button>
-         </div>
-              
-     </nav>
-         </>
-    )
+  const logout = () => {
+    setUser(null);
+  };
+
+  return (
+    <nav className="navbar" style={{ padding: "10px", borderBottom: "1px solid black" }}>
+      {user ? (
+        <>
+          <span>Hello, {user.name}</span>
+          <button onClick={logout} style={{ marginLeft: "10px" }}>
+            Logout
+          </button>
+        </>
+      ) : (
+        <button onClick={login}>Login</button>
+      )}
+    </nav>
+  );
 }
-
-
-
-
 
 export default Navbar;
