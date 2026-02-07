@@ -5,7 +5,7 @@ function Navbar() {
   const { user, setUser } = useContext(UserContext);
 
   const login = () => {
-    setUser({ name: "Aman" });
+    setUser({ name: "Manan" });
   };
 
   const logout = () => {
